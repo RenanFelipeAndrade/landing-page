@@ -9,7 +9,7 @@ export const ImageSection = () => {
           <h2 className="mb-2 text-2xl sm:text-4xl lg:mb-12 font-semibold">
             Receba treinos de casa
           </h2>
-          <p className="text-gray-400 text-sm">
+          <p className="text-text-gray text-sm">
             Receber treinos personalizados em casa oferece a conveniência e a
             flexibilidade de se exercitar no conforto do seu lar. Com acesso à
             nossa plataforma, você pode desfrutar de treinos adaptados às suas
@@ -52,7 +52,7 @@ export const ImageSection = () => {
           <h2 className="mb-2 text-2xl sm:text-4xl lg:mb-12 font-semibold">
             Atinja seus objetivos com suporte especializado
           </h2>
-          <p className="text-gray-400 text-sm">
+          <p className="text-text-gray text-sm">
             Na nossa plataforma, você tem a oportunidade de fazer treinos
             acompanhados por um personal trainer de sua escolha. Acreditamos na
             importância do suporte especializado e personalizado para maximizar

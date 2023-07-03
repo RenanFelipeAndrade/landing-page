@@ -20,6 +20,14 @@ export const Hero = () => {
     return biggerTitle;
   }, [powerWords]);
 
+  const companies = [
+    "nike",
+    "buzzfeed",
+    "esprit",
+    "national-geographic",
+    "dw",
+    "huffpost",
+  ];
   const [currentTitle, setCurrentTitle] = useState(powerWords[0]);
   const fixedTitleRef = useRef<HTMLSpanElement>(null);
 
@@ -44,7 +52,7 @@ export const Hero = () => {
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className={`mx-auto overflow-hidden font-extrabold text-5xl sm:text-6xl mb-6 md:text-7xl lg:text-8xl lg:mb-10 md:leading-[70px] xl:text-[172px] lg:leading-[90px] xl:leading-[150px]`}
+          className={`mx-auto overflow-hidden font-extrabold xxsm:text-6xl xsm:text-7xl text-5xl sm:text-6xl mb-6 md:text-7xl lg:text-8xl lg:mb-10 md:leading-[70px] xl:text-[130px] lg:leading-[90px] xl:leading-[110px] 2xl:text-[172px] 2xl:leading-[150px]`}
           style={{ width: `${bigestTitle.length}ch` }}
         >
           <span ref={fixedTitleRef}>SEMPRE</span>
@@ -71,6 +79,23 @@ export const Hero = () => {
         >
           Comece a treinar!
         </motion.button>
+        <motion.div className="max-w-[600px]  mt-16">
+          <h4 className="font-semibold text-text-gray text-sm mb-4 lg:mb-8">
+            AS MARCAS APOIAM
+          </h4>
+          <motion.ul className="flex items-center justify-between flex-wrap gap-2 lg:gap-4">
+            {companies.map((company, index) => (
+              <motion.li key={index}>
+                <Image
+                  src={`/${company}.svg`}
+                  width={50}
+                  height={50}
+                  alt={`${company} icon`}
+                />
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
       </div>
       <motion.div
         initial={{ y: 10, opacity: 0 }}
@@ -87,13 +112,13 @@ export const Hero = () => {
           />
         </div>
         <ul className="hidden sm:block">
-          <li className="z-40 absolute right-[18%] top-0 flex items-center gap-2 rounded-xl lg:p-4 p-2 text-lg bg-primary/90 lg:text-2xl">
+          <li className="z-40 absolute right-[18%] xl:right-[35%] top-0 flex items-center gap-2 rounded-xl lg:p-4 p-2 text-lg bg-primary/90 lg:text-2xl">
             <span className="bg-primary rounded-full p-1">
               <GiRunningShoe />
             </span>
             <p className="font-extrabold">4,95km</p>
           </li>
-          <li className="z-40 absolute -left-[15%] xl:-left-[50%] bottom-[15%] flex items-center gap-3 rounded-xl lg:p-3 p-2 bg-pale-black/90 lg:text-lg">
+          <li className="z-40 absolute -left-[15%] xl:-left-[20%] bottom-[15%] sm:bottom-[28%] flex items-center gap-3 rounded-xl lg:p-3 p-2 bg-pale-black/90 lg:text-lg">
             <span className="bg-white rounded-full">
               <AiFillPlayCircle className="fill-primary h-9 w-9 lg:w-10 lg:h-10" />
             </span>

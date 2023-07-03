@@ -3,6 +3,10 @@ module.exports = {
   content: ["src/**/*.tsx"],
   theme: {
     extend: {
+      screens: {
+        xxsm: "384px",
+        xsm: "512px",
+      },
       backgroundImage: {
         "img-section-1": "url(/img-section-1.png)",
         "img-section-2": "url(/img-section-2.png)",

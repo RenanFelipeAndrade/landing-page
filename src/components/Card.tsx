@@ -14,7 +14,7 @@ export const Card = ({ className, title, subtitle, link }: CardProps) => {
     >
       <div>
         <h4 className="font-semibold mb-3">{title}</h4>
-        <p className="text-gray-400 text-sm">{subtitle}</p>
+        <p className="text-text-gray text-sm">{subtitle}</p>
       </div>
       {link && (
         <div className="flex items-end mt-2">
